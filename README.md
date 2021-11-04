@@ -1,5 +1,5 @@
 # ptRecorder
-Pressure and Temperature recorder comissioned by DLS Vaccum
+Pressure and Temperature recorder created by Daniel Brennand and comissioned by DLS Vacuum Dept.
 
 ### DLS Contacts
 
