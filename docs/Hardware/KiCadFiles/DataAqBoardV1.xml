@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\lzl26268\Documents\DataAqBoardV1\DataAqBoardV1.sch</source>
+    <date>22/07/2021 14:52:52</date>
+    <tool>Eeschema (5.1.10)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>DAQ board</title>
+        <company>DLS</company>
+        <rev>V1</rev>
+        <date/>
+        <source>DataAqBoardV1.sch</source>
+        <comment number="1" value="Xiao Board"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/ThermocoupleAmps/" tstamps="/60FABF6B/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ThermocoupleAmps.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/ADC1/" tstamps="/60F8AD1A/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ADC1.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/ADC2/" tstamps="/610A7369/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ADC2.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>SeeeduinoXIAO</value>
+      <footprint>Seeeduino XIAO KICAD:Seeeduino XIAO-MOUDLE14P-2.54-21X17.8MM</footprint>
+      <libsource lib="Seeeduino_XIAO" part="SeeeduinoXIAO" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F843E9</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>MCP1541T-I_TT</value>
+      <footprint>SOT-23_MC_MCH</footprint>
+      <libsource lib="MCP1541" part="MCP1541T-I_TT" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6133E554</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>MAX31855KASA+</value>
+      <footprint>21-0041B_8_MXM</footprint>
+      <libsource lib="MAX31855" part="MAX31855KASA+" description=""/>
+      <sheetpath names="/ThermocoupleAmps/" tstamps="/60FABF6B/"/>
+      <tstamp>60FAC29E</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>3817564</value>
+      <footprint>3817564</footprint>
+      <datasheet>https://docs.rs-online.com/edff/0900766b815bb578.pdf</datasheet>
+      <fields>
+        <field name="Description">Miniature PCB Socket Connector PCB Mounting Socket For Type K Thermocouple</field>
+        <field name="Height">8</field>
+        <field name="Manufacturer_Name">RS Components</field>
+        <field name="Manufacturer_Part_Number">3817564</field>
+      </fields>
+      <libsource lib="ThermocoupleConnector" part="3817564" description=""/>
+      <sheetpath names="/ThermocoupleAmps/" tstamps="/60FABF6B/"/>
+      <tstamp>610E7090</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="CAP" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ThermocoupleAmps/" tstamps="/60FABF6B/"/>
+      <tstamp>60F9D215</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>MAX31855KASA+</value>
+      <footprint>21-0041B_8_MXM</footprint>
+      <libsource lib="MAX31855" part="MAX31855KASA+" description=""/>
+      <sheetpath names="/ThermocoupleAmps/" tstamps="/60FABF6B/"/>
+      <tstamp>60FAE0C8</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>3817564</value>
+      <footprint>3817564</footprint>
+      <datasheet>https://docs.rs-online.com/edff/0900766b815bb578.pdf</datasheet>
+      <fields>
+        <field name="Description">Miniature PCB Socket Connector PCB Mounting Socket For Type K Thermocouple</field>
+        <field name="Height">8</field>
+        <field name="Manufacturer_Name">RS Components</field>
+        <field name="Manufacturer_Part_Number">3817564</field>
+      </fields>
+      <libsource lib="ThermocoupleConnector" part="3817564" description=""/>
+      <sheetpath names="/ThermocoupleAmps/" tstamps="/60FABF6B/"/>
+      <tstamp>60FAE0DC</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="CAP" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ThermocoupleAmps/" tstamps="/60FABF6B/"/>
+      <tstamp>60FAE0F3</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>ADS8332IBPWR</value>
+      <footprint>PW24</footprint>
+      <libsource lib="ADS8332" part="ADS8332IBPWR" description=""/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>60F8AF30</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>09661127601</value>
+      <footprint>09661126600</footprint>
+      <datasheet>https://b2b.harting.com/files/download/PRD/PDF_TS/0966112X60X_BL02_R31892_100078757DRW002A.pdf?siteName=Ebusiness+Site&amp;autoLogoutEnabled=true&amp;autoLogoutTime=1800&amp;showPrivacyEmailAgreement=false&amp;contextURL=https%3A%2F%2Fb2b.harting.com%2Febusiness%2Fen_us</datasheet>
+      <fields>
+        <field name="Description">Harting 2.74mm Pitch 9 Way Right Angle Through Hole Mount PCB D-sub Connector, Socket, with M3 Threaded Inserts</field>
+        <field name="Height">13.6</field>
+        <field name="Manufacturer_Name">HARTING</field>
+        <field name="Manufacturer_Part_Number">09661127601</field>
+        <field name="Mouser Part Number">617-09661127601</field>
+        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=617-09661127601</field>
+      </fields>
+      <libsource lib="9PinDSubConnector" part="09661127601" description=""/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>60FB432F</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>60FF849A</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>60FF84A0</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>60FF84A6</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>61011056</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>6101105C</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>61011062</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>61013093</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>61013099</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>6101309F</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>61013FFB</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>61014001</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>61014007</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>61015EB5</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>61015EBB</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>61015EC1</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>610173E1</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>610173E7</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>610173ED</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>610877E6</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>610AB3A5</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>1k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>612C0ECA</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>D3W3P36A6GL08LF</value>
+      <footprint>D3W3P36A6GL08LF</footprint>
+      <datasheet>https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/c01-8646-0709.pdf</datasheet>
+      <fields>
+        <field name="Arrow Part Number">D3W3P36A6GL08LF</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/d3w3p36a6gl08lf/amphenol-fci</field>
+        <field name="Description">D-Sub Mixed Contact Connectors 3W3 PIN R/A DSUB 30A W/POWER CONTACTS</field>
+        <field name="Height">12.96</field>
+        <field name="Manufacturer_Name">Amphenol</field>
+        <field name="Manufacturer_Part_Number">D3W3P36A6GL08LF</field>
+        <field name="Mouser Part Number">649-D3W3P36A6GL08LF</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Amphenol-FCI/D3W3P36A6GL08LF/?qs=1Qbx6cv8UfWstYfbCYDn5A%3D%3D</field>
+      </fields>
+      <libsource lib="D3W3P36A6GL08LF" part="D3W3P36A6GL08LF" description="D-Sub Mixed Contact Connectors 3W3 PIN R/A DSUB 30A W/POWER CONTACTS"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>613CCD68</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>6147EB7A</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>6147EB80</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC1/" tstamps="/60F8AD1A/"/>
+      <tstamp>6147EB86</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>ADS8332IBPWR</value>
+      <footprint>PW24</footprint>
+      <libsource lib="ADS8332" part="ADS8332IBPWR" description=""/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>6154033A</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>09661127601</value>
+      <footprint>09661126600</footprint>
+      <datasheet>https://b2b.harting.com/files/download/PRD/PDF_TS/0966112X60X_BL02_R31892_100078757DRW002A.pdf?siteName=Ebusiness+Site&amp;autoLogoutEnabled=true&amp;autoLogoutTime=1800&amp;showPrivacyEmailAgreement=false&amp;contextURL=https%3A%2F%2Fb2b.harting.com%2Febusiness%2Fen_us</datasheet>
+      <fields>
+        <field name="Description">Harting 2.74mm Pitch 9 Way Right Angle Through Hole Mount PCB D-sub Connector, Socket, with M3 Threaded Inserts</field>
+        <field name="Height">13.6</field>
+        <field name="Manufacturer_Name">HARTING</field>
+        <field name="Manufacturer_Part_Number">09661127601</field>
+        <field name="Mouser Part Number">617-09661127601</field>
+        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=617-09661127601</field>
+      </fields>
+      <libsource lib="9PinDSubConnector" part="09661127601" description=""/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>61540348</tstamp>
+    </comp>
+    <comp ref="R29">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>6154034E</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>61540354</tstamp>
+    </comp>
+    <comp ref="R30">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>6154035A</tstamp>
+    </comp>
+    <comp ref="R27">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>61540370</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>61540376</tstamp>
+    </comp>
+    <comp ref="R28">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>6154037C</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>61540392</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>61540398</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>6154039E</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>615403B4</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>615403BA</tstamp>
+    </comp>
+    <comp ref="R24">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>615403C0</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>615403D6</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>615403DC</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>615403E2</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>615403F8</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>615403FE</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>61540404</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>61540440</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>61540454</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>1k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>61540471</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>D3W3P36A6GL08LF</value>
+      <footprint>D3W3P36A6GL08LF</footprint>
+      <datasheet>https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/c01-8646-0709.pdf</datasheet>
+      <fields>
+        <field name="Arrow Part Number">D3W3P36A6GL08LF</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/d3w3p36a6gl08lf/amphenol-fci</field>
+        <field name="Description">D-Sub Mixed Contact Connectors 3W3 PIN R/A DSUB 30A W/POWER CONTACTS</field>
+        <field name="Height">12.96</field>
+        <field name="Manufacturer_Name">Amphenol</field>
+        <field name="Manufacturer_Part_Number">D3W3P36A6GL08LF</field>
+        <field name="Mouser Part Number">649-D3W3P36A6GL08LF</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Amphenol-FCI/D3W3P36A6GL08LF/?qs=1Qbx6cv8UfWstYfbCYDn5A%3D%3D</field>
+      </fields>
+      <libsource lib="D3W3P36A6GL08LF" part="D3W3P36A6GL08LF" description="D-Sub Mixed Contact Connectors 3W3 PIN R/A DSUB 30A W/POWER CONTACTS"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>6154048D</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>3k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>615404A9</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>100nF</value>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="C" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>615404AF</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>2k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/ADC2/" tstamps="/610A7369/"/>
+      <tstamp>615404B5</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="9PinDSubConnector" part="09661127601">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">09661127601</field>
+        <field name="Footprint">09661126600</field>
+        <field name="Datasheet">https://b2b.harting.com/files/download/PRD/PDF_TS/0966112X60X_BL02_R31892_100078757DRW002A.pdf?siteName=Ebusiness+Site&amp;autoLogoutEnabled=true&amp;autoLogoutTime=1800&amp;showPrivacyEmailAgreement=false&amp;contextURL=https%3A%2F%2Fb2b.harting.com%2Febusiness%2Fen_us</field>
+        <field name="Description">Harting 2.74mm Pitch 9 Way Right Angle Through Hole Mount PCB D-sub Connector, Socket, with M3 Threaded Inserts</field>
+        <field name="Height">13.6</field>
+        <field name="Manufacturer_Name">HARTING</field>
+        <field name="Manufacturer_Part_Number">09661127601</field>
+        <field name="Mouser Part Number">617-09661127601</field>
+        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=617-09661127601</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="MH1" name="MH1" type="passive"/>
+        <pin num="MH2" name="MH2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ADS8332" part="ADS8332IBPWR">
+      <footprints>
+        <fp>PW24</fp>
+        <fp>PW24-M</fp>
+        <fp>PW24-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ADS8332IBPWR</field>
+        <field name="Footprint">PW24</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN1" type="input"/>
+        <pin num="2" name="IN2" type="input"/>
+        <pin num="3" name="IN3" type="input"/>
+        <pin num="4" name="IN4/NC" type="input"/>
+        <pin num="5" name="IN5/NC" type="input"/>
+        <pin num="6" name="IN6/NC" type="input"/>
+        <pin num="7" name="IN7/NC" type="input"/>
+        <pin num="8" name="*RESET" type="input"/>
+        <pin num="9" name="EOC/*INT/CDI" type="BiDi"/>
+        <pin num="10" name="SCLK" type="input"/>
+        <pin num="11" name="FS/*CS" type="input"/>
+        <pin num="12" name="SDI" type="input"/>
+        <pin num="13" name="SDO" type="output"/>
+        <pin num="14" name="DGND" type="power_in"/>
+        <pin num="15" name="*CONVST" type="input"/>
+        <pin num="16" name="VBD" type="power_in"/>
+        <pin num="17" name="VA" type="power_in"/>
+        <pin num="18" name="REF+" type="input"/>
+        <pin num="19" name="REF-" type="input"/>
+        <pin num="20" name="AGND" type="power_in"/>
+        <pin num="21" name="ADCIN" type="input"/>
+        <pin num="22" name="MUXOUT" type="output"/>
+        <pin num="23" name="COM" type="input"/>
+        <pin num="24" name="IN0" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="D3W3P36A6GL08LF" part="D3W3P36A6GL08LF">
+      <description>D-Sub Mixed Contact Connectors 3W3 PIN R/A DSUB 30A W/POWER CONTACTS</description>
+      <docs>https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/c01-8646-0709.pdf</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">D3W3P36A6GL08LF</field>
+        <field name="Footprint">D3W3P36A6GL08LF</field>
+        <field name="Datasheet">https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/c01-8646-0709.pdf</field>
+        <field name="Description">D-Sub Mixed Contact Connectors 3W3 PIN R/A DSUB 30A W/POWER CONTACTS</field>
+        <field name="Height">12.96</field>
+        <field name="Manufacturer_Name">Amphenol</field>
+        <field name="Manufacturer_Part_Number">D3W3P36A6GL08LF</field>
+        <field name="Mouser Part Number">649-D3W3P36A6GL08LF</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Amphenol-FCI/D3W3P36A6GL08LF/?qs=1Qbx6cv8UfWstYfbCYDn5A%3D%3D</field>
+        <field name="Arrow Part Number">D3W3P36A6GL08LF</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/d3w3p36a6gl08lf/amphenol-fci</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="A1" type="passive"/>
+        <pin num="A2" name="A2" type="passive"/>
+        <pin num="A3" name="A3" type="passive"/>
+        <pin num="MH1" name="MH1" type="passive"/>
+        <pin num="MH2" name="MH2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MAX31855" part="MAX31855KASA+">
+      <footprints>
+        <fp>21-0041B_8_MXM</fp>
+        <fp>21-0041B_8_MXM-M</fp>
+        <fp>21-0041B_8_MXM-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX31855KASA+</field>
+        <field name="Footprint">21-0041B_8_MXM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="T-" type="input"/>
+        <pin num="3" name="T+" type="input"/>
+        <pin num="4" name="VCC" type="power_in"/>
+        <pin num="5" name="SCK" type="input"/>
+        <pin num="6" name="*CS" type="unspc"/>
+        <pin num="7" name="SO" type="output"/>
+        <pin num="8" name="DNC" type="NotConnected"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCP1541" part="MCP1541T-I_TT">
+      <footprints>
+        <fp>SOT-23_MC_MCH</fp>
+        <fp>SOT-23_MC_MCH-M</fp>
+        <fp>SOT-23_MC_MCH-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP1541T-I_TT</field>
+        <field name="Footprint">SOT-23_MC_MCH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="unspc"/>
+        <pin num="2" name="VOUT" type="unspc"/>
+        <pin num="3" name="VSS" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="Seeeduino_XIAO" part="SeeeduinoXIAO">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SeeeduinoXIAO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PA02_A0_D0" type="unspc"/>
+        <pin num="2" name="PA4_A1_D1" type="unspc"/>
+        <pin num="3" name="PA10_A2_D2" type="unspc"/>
+        <pin num="4" name="PA11_A3_D3" type="unspc"/>
+        <pin num="5" name="PA8_A4_D4_SDA" type="unspc"/>
+        <pin num="6" name="PA9_A5_D5_SCL" type="unspc"/>
+        <pin num="7" name="PB08_A6_D6_TX" type="unspc"/>
+        <pin num="8" name="PB09_A7_D7_RX" type="unspc"/>
+        <pin num="9" name="PA7_A8_D8_SCK" type="unspc"/>
+        <pin num="10" name="PA5_A9_D9_MISO" type="unspc"/>
+        <pin num="11" name="PA6_A10_D10_MOSI" type="unspc"/>
+        <pin num="12" name="3V3" type="unspc"/>
+        <pin num="13" name="GND" type="unspc"/>
+        <pin num="14" name="5V" type="unspc"/>
+        <pin num="15" name="5V" type="input"/>
+        <pin num="16" name="GND" type="input"/>
+        <pin num="17" name="PA31_SWDIO" type="input"/>
+        <pin num="18" name="PA30_SWCLK" type="input"/>
+        <pin num="19" name="RESET" type="input"/>
+        <pin num="20" name="GND" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="ThermocoupleConnector" part="3817564">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">3817564</field>
+        <field name="Footprint">3817564</field>
+        <field name="Datasheet">https://docs.rs-online.com/edff/0900766b815bb578.pdf</field>
+        <field name="Description">Miniature PCB Socket Connector PCB Mounting Socket For Type K Thermocouple</field>
+        <field name="Height">8</field>
+        <field name="Manufacturer_Name">RS Components</field>
+        <field name="Manufacturer_Part_Number">3817564</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="MH1" name="MH1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pspice" part="CAP">
+      <aliases>
+        <alias>C</alias>
+      </aliases>
+      <description>Capacitor symbol for simulation only</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CAP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="9PinDSubConnector">
+      <uri>C:/Users/lzl26268/Documents/KiCadLibraries/9PinDSubConnector/9PinDSubConnector.lib</uri>
+    </library>
+    <library logical="ADS8332">
+      <uri>C:/Users/lzl26268/Documents/KiCadLibraries/ADS8332IBPWR/2021-07-19_12-57-01.lib</uri>
+    </library>
+    <library logical="D3W3P36A6GL08LF">
+      <uri>C:\Users\lzl26268\Documents\KiCadLibraries\3PinConnector\D3W3P36A6GL08LF.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="MAX31855">
+      <uri>C:/Users/lzl26268/Documents/KiCadLibraries/MAX31855/2021-07-19_14-01-43.lib</uri>
+    </library>
+    <library logical="MCP1541">
+      <uri>C:/Users/lzl26268/Documents/KiCadLibraries/MCP1541/MCP1541.lib</uri>
+    </library>
+    <library logical="Seeeduino_XIAO">
+      <uri>C:/Users/lzl26268/Documents/KiCadLibraries/Seeeduino XIAO KICAD/Seeeduino XIAO.lib</uri>
+    </library>
+    <library logical="ThermocoupleConnector">
+      <uri>C:/Users/lzl26268/Documents/KiCadLibraries/ThermocoupleConnector/ThermocoupleConnector.lib</uri>
+    </library>
+    <library logical="pspice">
+      <uri>C:\Program Files\KiCad\share\kicad\library/pspice.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(U1-Pad7)">
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="2" name="MISO">
+      <node ref="U6" pin="13"/>
+      <node ref="U3" pin="7"/>
+      <node ref="U5" pin="13"/>
+      <node ref="U4" pin="7"/>
+      <node ref="U1" pin="10"/>
+    </net>
+    <net code="3" name="SCK">
+      <node ref="U3" pin="5"/>
+      <node ref="U4" pin="5"/>
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="4" name="GND">
+      <node ref="U3" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C13" pin="1"/>
+      <node ref="C12" pin="2"/>
+      <node ref="U4" pin="1"/>
+      <node ref="R15" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="U5" pin="19"/>
+      <node ref="J4" pin="8"/>
+      <node ref="J4" pin="7"/>
+      <node ref="U5" pin="23"/>
+      <node ref="U5" pin="20"/>
+      <node ref="J4" pin="9"/>
+      <node ref="J3" pin="A2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="R13" pin="2"/>
+      <node ref="C10" pin="2"/>
+      <node ref="R9" pin="2"/>
+      <node ref="R11" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="U5" pin="14"/>
+      <node ref="U6" pin="14"/>
+      <node ref="C15" pin="2"/>
+      <node ref="R20" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="R22" pin="2"/>
+      <node ref="U6" pin="20"/>
+      <node ref="U6" pin="23"/>
+      <node ref="U6" pin="19"/>
+      <node ref="C19" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="R24" pin="2"/>
+      <node ref="R28" pin="2"/>
+      <node ref="C18" pin="2"/>
+      <node ref="R26" pin="2"/>
+      <node ref="R17" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="J6" pin="7"/>
+      <node ref="J6" pin="8"/>
+      <node ref="J6" pin="9"/>
+      <node ref="C20" pin="2"/>
+      <node ref="R30" pin="2"/>
+      <node ref="J5" pin="A2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="R2" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R7" pin="2"/>
+      <node ref="U2" pin="3"/>
+      <node ref="C6" pin="2"/>
+      <node ref="R5" pin="2"/>
+      <node ref="U1" pin="13"/>
+    </net>
+    <net code="5" name="+3V3">
+      <node ref="C1" pin="1"/>
+      <node ref="U4" pin="4"/>
+      <node ref="U5" pin="8"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U3" pin="4"/>
+      <node ref="R16" pin="2"/>
+      <node ref="C12" pin="1"/>
+      <node ref="U6" pin="8"/>
+      <node ref="U6" pin="16"/>
+      <node ref="U1" pin="12"/>
+      <node ref="R1" pin="2"/>
+      <node ref="U5" pin="16"/>
+    </net>
+    <net code="6" name="Net-(U1-Pad8)">
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="7" name="Net-(U1-Pad5)">
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="8" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="9" name="+5V">
+      <node ref="U2" pin="1"/>
+      <node ref="U1" pin="14"/>
+      <node ref="U5" pin="17"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C13" pin="2"/>
+      <node ref="U6" pin="17"/>
+    </net>
+    <net code="10" name="Vref">
+      <node ref="U2" pin="2"/>
+      <node ref="U6" pin="18"/>
+      <node ref="U5" pin="18"/>
+    </net>
+    <net code="11" name="CS1">
+      <node ref="U1" pin="1"/>
+      <node ref="U5" pin="11"/>
+    </net>
+    <net code="12" name="MOSI">
+      <node ref="U6" pin="12"/>
+      <node ref="U5" pin="12"/>
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="13" name="Net-(U1-Pad15)">
+      <node ref="U1" pin="15"/>
+    </net>
+    <net code="14" name="Net-(U1-Pad16)">
+      <node ref="U1" pin="16"/>
+    </net>
+    <net code="15" name="Net-(U1-Pad17)">
+      <node ref="U1" pin="17"/>
+    </net>
+    <net code="16" name="Net-(U1-Pad18)">
+      <node ref="U1" pin="18"/>
+    </net>
+    <net code="17" name="Net-(U1-Pad19)">
+      <node ref="U1" pin="19"/>
+    </net>
+    <net code="18" name="CS2">
+      <node ref="U6" pin="11"/>
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="19" name="Net-(U1-Pad20)">
+      <node ref="U1" pin="20"/>
+    </net>
+    <net code="20" name="CS3">
+      <node ref="U1" pin="3"/>
+      <node ref="U3" pin="6"/>
+      <node ref="U4" pin="6"/>
+    </net>
+    <net code="21" name="CS4">
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="22" name="Net-(J4-Pad3)">
+      <node ref="J4" pin="3"/>
+      <node ref="R8" pin="1"/>
+    </net>
+    <net code="23" name="Net-(J4-Pad2)">
+      <node ref="J4" pin="2"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="24" name="Net-(J4-Pad4)">
+      <node ref="J4" pin="4"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="25" name="Net-(J4-Pad5)">
+      <node ref="J4" pin="5"/>
+      <node ref="R12" pin="1"/>
+    </net>
+    <net code="26" name="Net-(U5-Pad21)">
+      <node ref="U5" pin="21"/>
+      <node ref="U5" pin="22"/>
+    </net>
+    <net code="27" name="Net-(C7-Pad1)">
+      <node ref="C7" pin="1"/>
+      <node ref="U5" pin="6"/>
+      <node ref="R7" pin="1"/>
+      <node ref="R6" pin="2"/>
+    </net>
+    <net code="28" name="Net-(C6-Pad1)">
+      <node ref="C6" pin="1"/>
+      <node ref="U5" pin="7"/>
+      <node ref="R5" pin="1"/>
+      <node ref="R4" pin="2"/>
+    </net>
+    <net code="29" name="Net-(J4-Pad6)">
+      <node ref="R14" pin="1"/>
+      <node ref="J4" pin="6"/>
+    </net>
+    <net code="30" name="Net-(J4-Pad1)">
+      <node ref="J4" pin="1"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="31" name="Net-(J3-PadA1)">
+      <node ref="J3" pin="A1"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="32" name="Net-(C5-Pad1)">
+      <node ref="U5" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="33" name="Net-(R1-Pad1)">
+      <node ref="R1" pin="1"/>
+      <node ref="U5" pin="15"/>
+    </net>
+    <net code="34" name="Net-(J3-PadMH2)">
+      <node ref="J3" pin="MH2"/>
+    </net>
+    <net code="35" name="Net-(J3-PadMH1)">
+      <node ref="J3" pin="MH1"/>
+    </net>
+    <net code="36" name="Net-(J3-PadA3)">
+      <node ref="J3" pin="A3"/>
+    </net>
+    <net code="37" name="Net-(U5-Pad24)">
+      <node ref="U5" pin="24"/>
+    </net>
+    <net code="38" name="Net-(J4-PadMH1)">
+      <node ref="J4" pin="MH1"/>
+    </net>
+    <net code="39" name="Net-(J4-PadMH2)">
+      <node ref="J4" pin="MH2"/>
+    </net>
+    <net code="40" name="Net-(C11-Pad1)">
+      <node ref="U5" pin="2"/>
+      <node ref="R14" pin="2"/>
+      <node ref="C11" pin="1"/>
+      <node ref="R15" pin="1"/>
+    </net>
+    <net code="41" name="SCLK">
+      <node ref="U5" pin="10"/>
+      <node ref="U6" pin="10"/>
+    </net>
+    <net code="42" name="Net-(U5-Pad9)">
+      <node ref="U5" pin="9"/>
+    </net>
+    <net code="43" name="Net-(C9-Pad1)">
+      <node ref="U5" pin="4"/>
+      <node ref="R11" pin="1"/>
+      <node ref="C9" pin="1"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="44" name="Net-(C8-Pad1)">
+      <node ref="U5" pin="5"/>
+      <node ref="R8" pin="2"/>
+      <node ref="R9" pin="1"/>
+      <node ref="C8" pin="1"/>
+    </net>
+    <net code="45" name="Net-(C10-Pad1)">
+      <node ref="R13" pin="1"/>
+      <node ref="R12" pin="2"/>
+      <node ref="C10" pin="1"/>
+      <node ref="U5" pin="3"/>
+    </net>
+    <net code="46" name="Net-(J1-PadMH1)">
+      <node ref="J1" pin="MH1"/>
+    </net>
+    <net code="47" name="Net-(J1-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="U3" pin="2"/>
+    </net>
+    <net code="48" name="Net-(J1-Pad2)">
+      <node ref="J1" pin="2"/>
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="49" name="Net-(U3-Pad8)">
+      <node ref="U3" pin="8"/>
+    </net>
+    <net code="50" name="Net-(J2-Pad1)">
+      <node ref="J2" pin="1"/>
+      <node ref="U4" pin="2"/>
+    </net>
+    <net code="51" name="Net-(J2-Pad2)">
+      <node ref="J2" pin="2"/>
+      <node ref="U4" pin="3"/>
+    </net>
+    <net code="52" name="Net-(J2-PadMH1)">
+      <node ref="J2" pin="MH1"/>
+    </net>
+    <net code="53" name="Net-(U4-Pad8)">
+      <node ref="U4" pin="8"/>
+    </net>
+    <net code="54" name="Net-(U6-Pad21)">
+      <node ref="U6" pin="22"/>
+      <node ref="U6" pin="21"/>
+    </net>
+    <net code="55" name="Net-(R16-Pad1)">
+      <node ref="R16" pin="1"/>
+      <node ref="U6" pin="15"/>
+    </net>
+    <net code="56" name="Net-(J6-Pad6)">
+      <node ref="J6" pin="6"/>
+      <node ref="R29" pin="1"/>
+    </net>
+    <net code="57" name="Net-(J6-Pad1)">
+      <node ref="J6" pin="1"/>
+      <node ref="R19" pin="1"/>
+    </net>
+    <net code="58" name="Net-(J6-Pad4)">
+      <node ref="R25" pin="1"/>
+      <node ref="J6" pin="4"/>
+    </net>
+    <net code="59" name="Net-(J6-Pad5)">
+      <node ref="R27" pin="1"/>
+      <node ref="J6" pin="5"/>
+    </net>
+    <net code="60" name="Net-(J6-Pad2)">
+      <node ref="J6" pin="2"/>
+      <node ref="R21" pin="1"/>
+    </net>
+    <net code="61" name="Net-(C15-Pad1)">
+      <node ref="R19" pin="2"/>
+      <node ref="C15" pin="1"/>
+      <node ref="R20" pin="1"/>
+      <node ref="U6" pin="7"/>
+    </net>
+    <net code="62" name="Net-(J6-Pad3)">
+      <node ref="J6" pin="3"/>
+      <node ref="R23" pin="1"/>
+    </net>
+    <net code="63" name="Net-(C14-Pad1)">
+      <node ref="R18" pin="2"/>
+      <node ref="C14" pin="1"/>
+      <node ref="R17" pin="1"/>
+      <node ref="U6" pin="1"/>
+    </net>
+    <net code="64" name="Net-(J5-PadA1)">
+      <node ref="R18" pin="1"/>
+      <node ref="J5" pin="A1"/>
+    </net>
+    <net code="65" name="Net-(J5-PadMH2)">
+      <node ref="J5" pin="MH2"/>
+    </net>
+    <net code="66" name="Net-(J5-PadMH1)">
+      <node ref="J5" pin="MH1"/>
+    </net>
+    <net code="67" name="Net-(J5-PadA3)">
+      <node ref="J5" pin="A3"/>
+    </net>
+    <net code="68" name="Net-(C20-Pad1)">
+      <node ref="U6" pin="2"/>
+      <node ref="C20" pin="1"/>
+      <node ref="R30" pin="1"/>
+      <node ref="R29" pin="2"/>
+    </net>
+    <net code="69" name="Net-(J6-PadMH2)">
+      <node ref="J6" pin="MH2"/>
+    </net>
+    <net code="70" name="Net-(J6-PadMH1)">
+      <node ref="J6" pin="MH1"/>
+    </net>
+    <net code="71" name="Net-(C19-Pad1)">
+      <node ref="R27" pin="2"/>
+      <node ref="R28" pin="1"/>
+      <node ref="C19" pin="1"/>
+      <node ref="U6" pin="3"/>
+    </net>
+    <net code="72" name="Net-(U6-Pad9)">
+      <node ref="U6" pin="9"/>
+    </net>
+    <net code="73" name="Net-(U6-Pad24)">
+      <node ref="U6" pin="24"/>
+    </net>
+    <net code="74" name="Net-(C16-Pad1)">
+      <node ref="R21" pin="2"/>
+      <node ref="C16" pin="1"/>
+      <node ref="R22" pin="1"/>
+      <node ref="U6" pin="6"/>
+    </net>
+    <net code="75" name="Net-(C17-Pad1)">
+      <node ref="R23" pin="2"/>
+      <node ref="C17" pin="1"/>
+      <node ref="R24" pin="1"/>
+      <node ref="U6" pin="5"/>
+    </net>
+    <net code="76" name="Net-(C18-Pad1)">
+      <node ref="U6" pin="4"/>
+      <node ref="R25" pin="2"/>
+      <node ref="C18" pin="1"/>
+      <node ref="R26" pin="1"/>
+    </net>
+  </nets>
+</export>
