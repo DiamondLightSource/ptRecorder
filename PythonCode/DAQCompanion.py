@@ -309,7 +309,7 @@ def SetupControllerPort(Four):
         ModuleChoice = easygui.choicebox("Enter third module:","Modules",["Cold Cathode","Pirani"])
         if ModuleChoice == "Cold Cathode":
             ChannelList[2+Ofset] = "937A Cold Cathode 3" + P
-            ChannelList[1+Ofset] = "None"
+            ChannelList[1+Ofset] = "None" + P
         elif ModuleChoice == "Pirani":
             ChannelList[2+Ofset] = "937A Pirani 2.1" + P
             ChannelList[1+Ofset] = "937A Pirani 2.2" + P
