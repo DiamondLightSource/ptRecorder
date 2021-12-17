@@ -143,7 +143,9 @@ def ReadDataFromFile():
 
 #Conversion function
 def ConvertVoltage(Conversion,Voltage):
-    if Conversion == 1:
+    if Conversion == 0:
+        return Voltage
+    elif Conversion == 1:
         #Gauge controller conversion (937a and 937B) to mBar
         return np.power(10,(Voltage/0.6)-12) * 1.33322
     elif Conversion == 2:
@@ -206,8 +208,7 @@ def RequestData():
 
         #Do any requested conversions
         for n in range(16):
-            if Conversions[n]:
-                ToAdd[n] = ConvertVoltage(Conversions[n],ToAdd[n])
+            ToAdd[n] = ConvertVoltage(Conversions[n],ToAdd[n])
 
         #Check Set points
         for n in range(16):
@@ -288,72 +289,82 @@ def SetupControllerPort(Four):
     Ofset = 0
     if Four:
         Ofset = 7
+        P = " (P4)"
+    else:
+        P = " (P1)"
+
     TypeOfController = easygui.choicebox("Enter type of Gauge controller:","Controller",["937A","937B"])
     if TypeOfController == "937A":
 
-        ChannelList[5+Ofset] = "937A Cold Cathode 1"
-
-        ModuleChoice = easygui.choicebox("Enter first module:","Modules",["Cold Cathode","Pirani"])
-        if ModuleChoice == "Cold Cathode":
-            ChannelList[4+Ofset] = "937A Cold Cathode 2"
-            ChannelList[3+Ofset] = "None"
-        elif ModuleChoice == "Pirani":
-            ChannelList[4+Ofset] = "937A Pirani 1.1"
-            ChannelList[3+Ofset] = "937A Pirani 1.2"
+        ChannelList[5+Ofset] = "937A Cold Cathode 1" + P
 
         ModuleChoice = easygui.choicebox("Enter second module:","Modules",["Cold Cathode","Pirani"])
         if ModuleChoice == "Cold Cathode":
-            ChannelList[2+Ofset] = "937A Cold Cathode 3"
+            ChannelList[4+Ofset] = "937A Cold Cathode 2" + P
+            ChannelList[3+Ofset] = "None" + P
+        elif ModuleChoice == "Pirani":
+            ChannelList[4+Ofset] = "937A Pirani 1.1" + P
+            ChannelList[3+Ofset] = "937A Pirani 1.2" + P
+
+        ModuleChoice = easygui.choicebox("Enter third module:","Modules",["Cold Cathode","Pirani"])
+        if ModuleChoice == "Cold Cathode":
+            ChannelList[2+Ofset] = "937A Cold Cathode 3" + P
             ChannelList[1+Ofset] = "None"
         elif ModuleChoice == "Pirani":
-            ChannelList[2+Ofset] = "937A Pirani 2.1"
-            ChannelList[1+Ofset] = "937A Pirani 2.2"
+            ChannelList[2+Ofset] = "937A Pirani 2.1" + P
+            ChannelList[1+Ofset] = "937A Pirani 2.2" + P
 
-        ChannelList[6+Ofset] = "None"
+        ChannelList[6+Ofset] = "None" + P
 
         UpdateCheckBoxes()
     elif TypeOfController == "937B":
         ModuleChoice = easygui.choicebox("Enter first module:","Modules",["Cold Cathode","Pirani"])
         if ModuleChoice == "Cold Cathode":
-            ChannelList[5+Ofset] = "937A Cold Cathode 1"
-            ChannelList[4+Ofset] = "None"
+            ChannelList[5+Ofset] = "937B Cold Cathode 1" + P
+            ChannelList[4+Ofset] = "None" + P
         elif ModuleChoice == "Pirani":
-            ChannelList[5+Ofset] = "937A Pirani 2.1"
-            ChannelList[4+Ofset] = "937A Pirani 2.2"
+            ChannelList[5+Ofset] = "937B Pirani 2.1" + P
+            ChannelList[4+Ofset] = "937B Pirani 2.2" + P
 
         ModuleChoice = easygui.choicebox("Enter second module:","Modules",["Cold Cathode","Pirani"])
         if ModuleChoice == "Cold Cathode":
-            ChannelList[3+Ofset] = "937A Cold Cathode 2"
-            ChannelList[2+Ofset] = "None"
+            ChannelList[3+Ofset] = "937B Cold Cathode 2" + P
+            ChannelList[2+Ofset] = "None" + P
         elif ModuleChoice == "Pirani":
-            ChannelList[3+Ofset] = "937A Pirani 2.1"
-            ChannelList[2+Ofset] = "937A Pirani 2.2"
+            ChannelList[3+Ofset] = "937B Pirani 2.1" + P
+            ChannelList[2+Ofset] = "937B Pirani 2.2" + P
 
         ModuleChoice = easygui.choicebox("Enter third module:","Modules",["Cold Cathode","Pirani"])
         if ModuleChoice == "Cold Cathode":
-            ChannelList[1+Ofset] = "937A Cold Cathode 3"
-            ChannelList[6+Ofset] = "None"
+            ChannelList[1+Ofset] = "937B Cold Cathode 3" + P
+            ChannelList[6+Ofset] = "None" + P
         elif ModuleChoice == "Pirani":
-            ChannelList[1+Ofset] = "937A Pirani 2.1"
-            ChannelList[6+Ofset] = "937A Pirani 2.2"
+            ChannelList[1+Ofset] = "937B Pirani 2.1" + P
+            ChannelList[6+Ofset] = "937B Pirani 2.2" + P
 
         UpdateCheckBoxes()
 
     if TypeOfController != None:
         ConvertChoice = easygui.ynbox("Should the data be converted?","Conversion",["Pressures","Raw Voltages"])
         if ConvertChoice:
-            for n in range(1,7):
-                Conversions[n+Ofset] = 1
+            Conversion = 1
+        else:
+            Conversion = 0
+        for n in range(1,7):
+            Conversions[n+Ofset] = Conversion
     
 def SetupSinglePort(Three):
     global ChannelList
     Ofset = 0
     if Three:
         Ofset = 7
+        P = " (P3)"
+    else:
+        P = " (P2)"
 
     TypeOfController = easygui.choicebox("Enter type of Gauge:","Gauge",["972B","925","902B"])
     if TypeOfController != None:
-        ChannelList[0+Ofset] = TypeOfController
+        ChannelList[0+Ofset] = TypeOfController + P
         ConvertChoice = easygui.ynbox("Should the data be converted?","Conversion",["Pressures","Raw Voltages"])
         if ConvertChoice:
             if TypeOfController == "972B":
@@ -365,6 +376,9 @@ def SetupSinglePort(Three):
             elif TypeOfController == "902B":
                 #Conv 5
                 Conversions[0+Ofset] = 5
+        else:
+            Conversions[0+Ofset] = 0
+            
         UpdateCheckBoxes()
 
 def AddSetPoints():
