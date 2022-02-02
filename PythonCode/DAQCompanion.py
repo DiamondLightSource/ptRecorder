@@ -82,7 +82,7 @@ StartStopAxis = fig.add_subplot(gs[8:10,0:2])
 SampleRateAxis = fig.add_subplot(gs[8:10,2:4])
 SetupSetPointsAxis = fig.add_subplot(gs[8:10,4:6])
 SetupIOAxis = fig.add_subplot(gs[8:10,6:8])
-DevAxis = fig.add_subplot(gs[8:10,9:10])
+ExitAxis = fig.add_subplot(gs[8:10,9:10])
 
 #Setting up the gui elements into their alloted spaces and initilizing them
 
@@ -95,7 +95,7 @@ StartStopBtn.hovercolor = "red"
 SampleRateBtn = Button(SampleRateAxis,"Change Sample Rate")
 SetupSetPointsBtn = Button(SetupSetPointsAxis,"Setup Set Points")
 SetupIOBtn = Button(SetupIOAxis,"Setup IO")
-DevBtn = Button(DevAxis,"")
+ExitBtn = Button(ExitAxis,"")
 
 
 #File IO functions
@@ -150,18 +150,26 @@ def ConvertVoltage(Conversion,Voltage):
         return np.power(10,(Voltage/0.6)-12) * 1.33322
     elif Conversion == 2:
         #Thermocouple conversion (interpret number as signed 14 bit with 0.25C per unit) to degrees c
-        if bin(int(Voltage))[2] == "1":
+        vbin = bin(int(Voltage)).removeprefix("0b")
+        for n in range(12-len(vbin)):
+            vbin = "0" + vbin
+        if vbin[0] == "1":
+            print("In Neg")
             #Neg temp
             NewNum = ""
-            for digit in bin(int(Voltage))[3:]:
+            for digit in vbin:
                 if digit == "1":
                     NewNum += "0"
                 else:
                     NewNum += "1"
-            return float(int(NewNum,2)+1)*-0.25
+            NewV = int(NewNum,base=2) + 1
+            return float(NewV)*-0.25
         else:
             #pos temp
+            print("In Pos")
             return float(Voltage)*0.25
+        #print(Voltage)
+        #return Voltage
     elif Conversion == 3:
         #972B Conversion to mBar
         return np.power(10,(2*Voltage)-11)*1.33322
@@ -192,19 +200,21 @@ def RequestData():
     print("Got packet: " + Packet)
 
     #Extract the data section
-    Packet = Packet.removeprefix("ADACH").removesuffix("SZ\r\n")
+    Packet = Packet.removeprefix("ADACH").removesuffix("Z\r\n")
     #print(Packet)
     #Seperate out channel data
     try:
         for n in range(16):
             ToAdd[n] = Packet[(n*5):((n*5)+5)]
+            #print(ToAdd[n])
     except:
         print("Failed, packet incrorrect")
     else:
     
         #Convert data
-        #Conversion to input voltage (Before pd)
-        ToAdd *= 0.00015625
+        #Conversion to input voltage (Before pd) execpt thermocouple
+        for n in range(14):            
+            ToAdd[n] *= 0.00015625
 
         #Do any requested conversions
         for n in range(16):
@@ -492,11 +502,9 @@ class WidgetFunctions:
                 print("Remove")
                 RemoveSetPoints()
 
-    def DevButton(self,event):
-        if random.random() > 0.5:
-            easygui.msgbox(Doom)
-        else:
-            easygui.msgbox(Cheese)
+    def ExitButton(self,event):
+        if easygui.boolbox("Really exit? (All measurments up to this point will be saved)","Exit",("Yes","No")):
+            plt.close()
 
 BtnFuncs = WidgetFunctions()
 
@@ -504,13 +512,14 @@ StartStopBtn.on_clicked(BtnFuncs.StartStop)
 SampleRateBtn.on_clicked(BtnFuncs.ChangeSampleRate)
 SetupSetPointsBtn.on_clicked(BtnFuncs.SetupSetPoints)
 SetupIOBtn.on_clicked(BtnFuncs.SetupIO)
-DevBtn.on_clicked(BtnFuncs.DevButton)
+ExitBtn.on_clicked(BtnFuncs.ExitButton)
 
 #Maximising the window upon startup
 wm = plt.get_current_fig_manager()
-wm.window.state('zoomed')
+wm.full_screen_toggle()
 
 #Displaying the gui
 plt.show(block=True)
+
 #When gui closed stop timer
 Looper.stop()
